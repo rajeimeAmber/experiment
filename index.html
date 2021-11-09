@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <div class="container" >
+        <form action="">
+            First Name : <input type="text" ng-model = "firstname"><br>
+            Second Name : <input type="checkbox" ng-model = "myVar">
+        </form>
+        <p>
+            You have entered {{firstname}}
+        </p>
+        <h1 ng-show = "myVar">
+            How are you doing today?
+        </h1>
+
+        <input type="radio" name="" id="" value="school" ng-model="radoiList">school
+        <input type="radio" name="" id="" value="work" ng-model="radoiList">work
+        <input type="radio" name="" id="" value="home" ng-model="radoiList">home
+    </div>
+
+<div ng-switch = "radoiList">
+    <div ng-switch-when = "school">
+        <p>This is the school</p>
+    </div>
+
+    <div ng-switch-when = "work">
+        <p>This is work</p>
+    </div>
+
+    <div ng-switch-when = "home">
+        <p>This is home</p>
+    </div>
+</div>  
+
+</div>
+</body>
+</html>
